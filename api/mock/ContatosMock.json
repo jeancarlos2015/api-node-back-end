@@ -1,0 +1,57 @@
+[
+  {
+    "nome": "José silveira",
+    "serial": "ff5fd21",
+    "telefone": "9999-9999",
+    "data":   "2020-01-01T00:00:00.000Z",
+    "operadora": {
+      "nome": "Oi",
+      "categoria": "Celular"
+    },
+    "cor": "blue"
+  },
+  {
+    "nome": "Maria aparecida",
+    "serial": "ffk1f",
+    "telefone": "9999-9999",
+    "data":  "2020-01-01T00:00:00.000Z",
+    "operadora": {
+      "nome": "Vivo",
+      "categoria": "Celular"
+    },
+    "cor": "red"
+  },
+  {
+    "nome": "Alexandre Oliveira",
+    "serial": "ffasf",
+    "telefone": "9999-9999",
+    "data":   "2020-01-01T00:00:00.000Z",
+    "operadora": {
+      "nome": "Tim",
+      "categoria": "Celular"
+    },
+    "cor": "green"
+  },
+  {
+    "nome": "Pedro alvares",
+    "serial": "f2faf",
+    "telefone": "9999-9999",
+    "data":   "2020-01-01T00:00:00.000Z",
+    "operadora": {
+      "nome": "GVT",
+      "categoria": "Fixo"
+    },
+    "cor": "yellow"
+  },
+  {
+    "nome": "lucas Santos",
+    "serial": "ffd12f4",
+    "telefone": "9999-9999",
+    "data":   "2020-01-01T00:00:00.000Z",
+    "operadora": {
+      "nome": "Embratel",
+      "categoria": "Fixo"
+    },
+    "cor": "red"
+  }
+]

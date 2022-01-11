@@ -1,0 +1,5 @@
+CREATE TABLE IF NOT EXISTS Operadora (
+    codoperadora INTEGER PRIMARY KEY AUTOINCREMENT,
+    nome TEXT NOT NULL,
+    categoria TEXT NOT NULL,
+);
