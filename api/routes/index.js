@@ -1,19 +1,26 @@
-const getRoutes = require('./contato-get-route');
-const postRoutes = require('./contato-post-route');
-const putRoutes = require('./contato-put-route');
-const deleteRoutes = require('./contato-delete-route');
-const loadDatabase = require('../data/setup-contato-database');
+const getRoutesContatos = require('./contato-get-route');
+const postRoutesContatos = require('./contato-post-route');
+const putRoutesContatos = require('./contato-put-route');
+const deleteRoutesContatos = require('./contato-delete-route');
+const loadDatabaseContato = require('../data/setup-contato-database');
 
+const getRoutesOperadoras = require('./operadora-get-route');
+const postRoutesOperadoras = require('./operadora-post-route');
+const loadDatabaseOperadora = require('../data/setup-operadora-database');
 module.exports = function (app, db) {
 
   // create database in case it was not created yeat, 
   // or update in case of migrations
-  loadDatabase(db);
+  loadDatabaseContato(db);
+  loadDatabaseOperadora(db);
 
   // start routes
-  getRoutes(app, db);
-  postRoutes(app, db);
-  putRoutes(app, db);
-  deleteRoutes(app, db);
+  getRoutesContatos(app, db);
+  postRoutesContatos(app, db);
+  putRoutesContatos(app, db);
+  deleteRoutesContatos(app, db);
+
+  getRoutesOperadoras(app, db);
+  postRoutesOperadoras(app, db);
 
 };

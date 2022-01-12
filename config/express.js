@@ -1,17 +1,17 @@
-const express    = require('express');
-const bodyParser = require('body-parser');
-const config     = require('config');
+const express = require('express');
+const cors = require('cors');
+const app = express();
+const port = 4300;
 
-module.exports = () => {
-  const app = express();
-  var cors = require('cors');
-  app.use(cors())
-  require('../api/routes/routes.js')(app);
-  // SETANDO VARIÁVEIS DA APLICAÇÃO
-  app.set('port', process.env.PORT || config.get('server.port'));
+var sqlite3 = require('sqlite3');
+var db = new sqlite3.Database('./api/data/db.sqlite');
+var bodyParser = require("body-parser");
 
-  // MIDDLEWARES
-  app.use(bodyParser.json());
- 
-  return app;
-};
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(cors());
+require('./api/routes')(app, db);
+
+app.listen(port, () => {
+    console.log('Backend NodeJS live on ' + port);
+});
